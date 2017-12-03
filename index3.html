@@ -23,48 +23,57 @@
 
         <!-- First Row After the Header -->
         <div class="row">
-            <div class="col-md-12">
-                <!-- You originally has it set up for two columns, remove the second
+            <!-- You originally has it set up for two columns, remove the second
     column as it is unneeded and set the first to always span all 12 columns
     even when at its smallest (xs). Set the overflow to hidden so no matter
     the height of your image it will never show outside this div-->
-                <div class="banner" href="index.html"><img src="https://www.nbcstore.com/media/catalog/category/parks-banner_1.jpg" alt="Parks and Rec Banner" style="width: 100%;">
-                </div>
+            <div class="banner" href="index.html"><img src="https://www.nbcstore.com/media/catalog/category/parks-banner_1.jpg" alt="Parks and Rec Banner" style="width: 100%;">
             </div>
         </div>
     </div>
     <!-- Start of content -->
 
-    <div class="container-fluid">
+    <div class="container">
         <!-- Second Row -->
         <div class="row">
             <div class="col-md-12">
-                <div class="word">Guess the Parks and Rec Character
-                    <div id="underscore">_ _ _ _ _</div>
+                <h2 class="word">Guess the Parks and Rec Character
+                    <div class="row"></div>
+                    <div class="col-md-12">
+                        <span id="startGame" class="start">Click Here to Begin</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span id="underScore" class="underscore">_ _ _ _ _</span>
+                        </div>
+                    </div>
+                </h2>
+            </div>
+            <!-- Third Row -->
+            <div class="row">
+                <div class="col-md-5">
+                    <div id="rightLetter" class="rightGuess">Right Letters Guessed</div>
+                </div>
+                <div class="col-md-5">
+                    <div id="wrongLetter" class="wrongGuess">Wrong Letters Guessed</div>
+                </div>
+                <div class="col-md-2">
+                    <div id="currentScore" class="score">Score</div>
                 </div>
             </div>
         </div>
-        <!-- Third Row -->
+        <!-- Linking JavaScript -->
+        <script src="assets/javascript/logic5.js"></script>
+        <!-- End of content wrap -->
 
-        <div class="col-md-6">
-            <div class="rightGuess">Right Letters Guessed</div>
-        </div>
-        <div class="col-md-6">
-            <div class="wrongGuess">Wrong Letters Guessed</div>
-        </div>
-    </div>
-    <!-- Linking JavaScript -->
-    <script src="assets/javascript/logic.js"></script>
-    <!-- End of content wrap -->
-
-    <!-- Start of footer -->
-    <footer class="footer">
-        <div class="two-toned-footer-color"></div>
-        <p class="text-muted text-muted-footer text-center">
-            &copy; Copyright 2017 Mike Ignaczak
-        </p>
-    </footer>
-    <!-- End of footer -->
+        <!-- Start of footer -->
+        <footer class="footer">
+            <div class="two-toned-footer-color"></div>
+            <p class="text-muted text-muted-footer text-center">
+                &copy; Copyright 2017 Mike Ignaczak
+            </p>
+        </footer>
+        <!-- End of footer -->
 
 </body>
 
