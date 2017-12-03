@@ -4,7 +4,7 @@
 const word = ['cheese burger', 'chicken nuggets', 'apple pie', 'chicken sandwich', 'sundae', 'happy meal'];
 // Choose word randomly
 
-var choosenWord = word[0];
+var choosenWord = word[randNum];
 var rightWord = [];
 var wrongWord = [];
 var underScore = [];
