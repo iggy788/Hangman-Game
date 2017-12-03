@@ -1,9 +1,4 @@
 // Letter the user selects
-var userChoice = "";
-var underScore = [];
-var wrongGuess = [];
-var rightGuess = [];
-var score = [];
 // Create an array
 var wordList = [
     "ron",
@@ -17,38 +12,38 @@ var wordList = [
     "donna",
 ];
 
-// choose a random word
-var randWord = wordList[Math.floor(Math.random() * wordList.length)]; // gives me a random number for my array
+// Choose a random word
+var randWord = Math.floor(Math.random() * wordList.length); // gives me a random number for my array
+var chosenWord = wordList[randWord];
+var underScore = [];
+// Right & Wrong word arrays
+var wrongGuess = [];
+var rightGuess = [];
 
-// display all the dashes
-// Beginning the Game
-var begin = document.getElementById('startGame');
-begin.onclick = function() {
-    alert('Generating AWord');
-    var dashes = (document.getElementById('underScore').innerHTML = '_ _ _ _');
-};
+// Testing
+console.log(chosenWord);
+console.log(underScore);
 
-// for loop to iterate over the array
-var chosenWord = wordList[0];
-for (var i = 0; i < randWord.length; i++) {
-    underScore.push("_");
-    html = `< div class="underscore">${wordList[i]}</div>`;
-    document.getElementById('underScore').innerHTML = underScore.join(' ');
-    console.log(randWord);
+// Create underscores based on length of word
+var generateUnderscore = () => {
+    for (var i = 0; i < chosenWord.length; i++) {
+        underScore.push('_');
+    }
+    return underScore;
 }
-// I have dashed word already, take the users (EVENTS) and any dashes with the correct letter
-var html = "i";
-// if statement that does special formatting
-// update the DOM from our for loop
-if (wordList[i] === 'ron') {
-    // do something special - add an extra message
-    html = `< div class="underscore">${wordList[i]}</div>`;
-    document.getElementById('rightLetter').innerHTML = rightGuess.join(' ');
-} else if (wordList[i] === 'leslie') {
-    html = `< div class="score">${wordList[i]}</div>`;
-    document.getElementById('currentScore').innerHTML = score.join(' ');
-} else {
-    // display the band
-    html = `< div class="wrongGuess">${wordList[i]}</div>`;
-    document.getElementById('wrongLetter').innerHTML = wrongGuess.join(' ');
-};
+console.log(generateUnderscore());
+
+// Get users guess
+document.addEventListener('keypress', (event) => {
+    var keyword = String.fromCharCode(event.keyCode);
+    // Check if guess is right
+    if (chosenWord.indexOf(keyword) > -1) {
+        // if right push to right array add to right guess array
+        rightGuess.push(keyword);
+        console.log('Selected the Right letter ' + rightGuess);
+    } else {
+        // if wrong push/add to wrongGuess array
+        wrongGuess.push(keyword);
+        console.log('Selected the Wrong letter ' + wrongGuess);
+    }
+});
