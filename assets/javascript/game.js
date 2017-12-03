@@ -9,6 +9,10 @@ var underScore = [];
 // Right & Wrong word arrays
 var wrongGuess = [];
 var rightGuess = [];
+var wins = 0;
+var losses = 0;
+var ties = 0;
+var guessesLeft = 9;
 // ========================================================================================================
 // Testing
 console.log(chosenWord);
@@ -46,13 +50,20 @@ document.getElementById("startGame").onclick = function() {
             console.log(underScore);
             // if the user guesses the entire chosenWord send alert that they win
             if (underScore.join('') === chosenWord) {
-                alert('You Win');
+                alert('You Win!');
+                location.reload();
             }
-        } else {
+        } else if (chosenWord.indexOf(keyword) < 0) {
             // if wrong push/add to wrongGuess array
             wrongGuess.push(keyword);
+            console.log(chosenWord.indexOf(keyword));
             console.log('Selected the Wrong letter ' + wrongGuess);
             domWrongGuess.innerHTML = wrongGuess.join(' ');
+            losses++;
+        } else {
+
+            alert('You Lose!');
+            location.reload();
         }
     })
 };
