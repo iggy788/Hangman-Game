@@ -54,3 +54,7 @@ document.onkeyup = function(event) {
     }
     alert("pressed a button");
 };
+
+function roundComplete() {
+    console.log("Win Count: " + winCount + " | Loss Count: " + lossCount + " | Guesses Left " + guessesLeft);
+}
