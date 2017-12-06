@@ -41,5 +41,7 @@ document.onkeyup = function(event) {
 //Main
 //================================================
 
+
+}
 //startGame();
 //https://www.youtube.com/watch?v=dvSKEXmYtMM

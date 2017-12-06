@@ -16,12 +16,13 @@
 
 <body>
     <h1 class="header">Parks and Rec Hangman!</h1>
-    <div class="header-row" id="header-row" style="padding: 0px;">
-        <!-- container-fluid is the same as container but spans a wider viewport,
+    <div class="header-row" id="header-row" style="padding: 0px;"></div>
+    <!-- container-fluid is the same as container but spans a wider viewport,
     it still has padding though so you need to remove this either by adding
     another class with no padding or inline as I did below -->
 
-        <!-- First Row After the Header -->
+    <!-- First Row After the Header -->
+    <div class="container-fluid">
         <div class="row">
             <!-- You originally has it set up for two columns, remove the second
     column as it is unneeded and set the first to always span all 12 columns
@@ -33,53 +34,73 @@
     </div>
     <!-- Start of content -->
 
-    <div class="container-fluid">
-        <!-- Second Row -->
+
+    <!-- Second Row -->
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <h2 class="word">Guess the Parks and Rec Character
                     <div class="row"></div>
                     <div class="col-md-12">
-                        <span id="startGame" class="start">Click Here to Begin</span>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <span id="underScore" class="underscore">_ _ _ _ _</span>
+                        <div class="col-md-9">
+                            <span id="startGame" class="start">Click Here to Begin</span>
                         </div>
-                    </div>
+                        <div class="col-md-3">
+                            <div class="guessesLeft">Guesses Left</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <span id="underScore" class="underscore">_ _ _ _ _</span>
+                            </div>
+                            <div class="col-md-3">
+
+                                <span id="guessesLeft">0</span>
+                            </div>
+                        </div>
                 </h2>
+                </div>
             </div>
+
             <!-- Third Row -->
             <div class="row">
                 <div class="col-md-4">
                     <div class="rightGuess">Right Letters Guessed</div>
-                    <span id="rightLetter">Right Guess</span>
+                    <div id="rightLetter">0</div>
                 </div>
                 <div class="col-md-4">
                     <div class="wrongGuess">Wrong Letters Guessed</div>
-                    <span id="wrongLetter">Wrong Guess</span>
+                    <div id="wrongLetter">0</div>
                 </div>
                 <div class="col-md-4">
                     <div class="score">Score</div>
-                    <span id="numGuesses">Guesses Left</span>
-                    <span id="currentWins">Wins</span>
-                    <span id="currentLosses">Losses</span>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="score">Wins</div>
+                            <div id="currentWins">0</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="score">Losses</div>
+                            <div id="currentLosses">0</div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Linking JavaScript -->
-    <script src="assets/javascript/game.js"></script>
-    <!-- End of content wrap -->
+        <!-- Start of footer -->
+        <footer class="footer">
+            <div class="two-toned-footer-color"></div>
+            <p class="text-muted text-muted-footer text-center">
+                &copy; Copyright 2017 Mike Ignaczak
+            </p>
+        </footer>
+        <!-- End of footer -->
 
-    <!-- Start of footer -->
-    <footer class="footer">
-        <div class="two-toned-footer-color"></div>
-        <p class="text-muted text-muted-footer text-center">
-            &copy; Copyright 2017 Mike Ignaczak
-        </p>
-    </footer>
-    <!-- End of footer -->
+        <!-- Linking JavaScript -->
+        <script src="assets/javascript/game.js"></script>
+        <!-- End of content wrap -->
 
 </body>
 

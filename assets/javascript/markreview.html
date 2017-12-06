@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        #word {
+            background-color: red;
+            height: 200px;
+            width: 200px;
+            border: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Post Content Column -->
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h1>Jumbotron</h1>
+                    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                    <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+                    <div id="word">Word</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // Variables --------------------------------------------------------------------------------
+        var num = 1;
+        var foo;
+        if (foo === undefined) {
+            console.log("Foo is undefined");
+        } else {
+            console.log("Foo has a value");
+        }
+        // Functions --------------------------------------------------------------------------------
+        function sum(a, b) {
+            return a + b;
+
+        };
+        //var sum; // Dont need this variable
+        //sum = a + b; // Dont need this variable
+
+        document.getElementById('word').onclick = function startGame() {
+
+            function nameGame(name) {
+                return name + " " + name + " Bo" + " B" + name.substring(1);
+            }
+            var output = nameGame("mike");
+
+            console.log(nameGame("Ben"));
+            console.log(output);
+
+            function foo(a, b, c) {
+                return 1;
+            }
+        }
+
+        console.log(1);
+    </script>
+</body>
+
+</html>

@@ -4,7 +4,7 @@
         /* Typography */
         font-family: 'Open Sans Condensed', sans-serif;
         /* Visual */
-        background-image: url("../images/parks-background.jpg");
+        background-color: peachpuff;
         color: green;
     }
     
@@ -28,6 +28,13 @@
         border: 2px solid red;
         text-align: center;
         background: #fff;
+        padding: 30px;
+    }
+    
+    .col-md-9 {
+        border: 2px solid red;
+        text-align: center;
+        background: #fff;
     }
     
     .col-md-4 {
@@ -35,7 +42,7 @@
         background: #fff;
     }
     
-    .col-md-2 {
+    .col-md-6 {
         border: 2px solid blue;
         background: #fff;
     }
@@ -123,6 +130,15 @@
         width: 100%;
     }
     
+    .guessesLeft {
+        border: 3px solid aquamarine;
+        font-size: 25px;
+        text-align: center;
+        margin: 20px auto;
+        height: 30px;
+        width: 100%;
+    }
+    
     #currentWins {
         border: 3px solid pink;
         font-size: 25px;
@@ -143,7 +159,7 @@
         float: right;
     }
     
-    #guessesLeft {
+    #numGuesses {
         border: 3px solid pink;
         font-size: 25px;
         text-align: center;
