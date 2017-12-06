@@ -1,7 +1,7 @@
 // GLOBAL VARIABLES
 // -----------------------------------------------------------------------------------------------
 var wordList = ['ron', 'ben', 'tom', 'april', 'andy', 'leslie', 'ann', 'donna'];
-var chosenWord = "";
+var chosenWord = '';
 var lettersInWord = [];
 var numBlanks = 0;
 var blanksAndSuccesses = [];
@@ -12,11 +12,13 @@ var winCount = 0;
 var lossCount = 0;
 var guessesLeft = 9;
 
+var debug = true;
+
 // FUNCTIONS
 // -----------------------------------------------------------------------------------------------
 function startGame() {
     chosenWord = wordList[Math.floor(Math.random() * wordList.length)];
-    lettersInWord = chosenWord.split("");
+    lettersInWord = chosenWord.split('');
     numBlanks = lettersInWord.length;
 
     // Reset
@@ -26,20 +28,16 @@ function startGame() {
 
     // Generate underscores for blanks and successes
     for (var i = 0; i < numBlanks; i++) {
-        blanksAndSuccesses.push("_");
+        blanksAndSuccesses.push('_');
     }
 
     // Change HTML
-    document.getElementById("wordToGuess").innerHTML = blanksAndSuccesses.join(" ");
-    document.getElementById("numGuesses").innerHTML = guessesLeft;
-    document.getElementById("winCounter").innerHTML = winCount;
-    document.getElementById("lossCounter").innerHTML = lossCount;
-
-    // Testing
-    console.log(chosenWord);
-    console.log(lettersInWord);
-    console.log(numBlanks);
-    console.log(blanksAndSuccesses);
+    document.getElementById('wordToGuess').innerHTML = blanksAndSuccesses.join(
+        ' '
+    );
+    document.getElementById('numGuesses').innerHTML = guessesLeft;
+    document.getElementById('winCounter').innerHTML = winCount;
+    document.getElementById('lossCounter').innerHTML = lossCount;
 }
 
 function checkLetters(letter) {
@@ -64,19 +62,28 @@ function checkLetters(letter) {
 }
 
 function roundComplete() {
-    console.log('Win Count: ' + winCount + ' | Loss Count: ' + lossCount + ' | Guesses Left: ' + guessesLeft);
+    console.log(
+        'Win Count: ' +
+        winCount +
+        ' | Loss Count: ' +
+        lossCount +
+        ' | Guesses Left: ' +
+        guessesLeft
+    );
 
     // Update HTML to say guesses left
-    document.getElementById("numGuesses").innerHTML = guessesLeft;
-    document.getElementById("wordToGuess").innerHTML = blanksAndSuccesses.join(" ");
-    document.getElementById("wrongGuesses").innerHTML = wrongLetters.join(" ");
+    document.getElementById('numGuesses').innerHTML = guessesLeft;
+    document.getElementById('wordToGuess').innerHTML = blanksAndSuccesses.join(
+        ' '
+    );
+    document.getElementById('wrongGuesses').innerHTML = wrongLetters.join(' ');
 
     // Check if user won
     if (lettersInWord.toString() == blanksAndSuccesses.toString()) {
-        winCount++
-        alert("You Won!");
+        winCount++;
+        alert('You Won!');
 
-        document.getElementById("winCounter").innerHTML = winCount;
+        document.getElementById('winCounter').innerHTML = winCount;
 
         startGame();
     } else if (guessesLeft == 0) {
@@ -89,6 +96,17 @@ function roundComplete() {
         startGame();
     }
 }
+// DEBUGGING PROCESS
+// -----------------------------------------------------------------------------------------------
+// Testing
+console.log(chosenWord);
+console.log(lettersInWord);
+console.log(numBlanks);
+console.log(blanksAndSuccesses);
+
+function debug(inDebugString) {
+    console.log(inDebugString);
+}
 // MAIN PROCESS
 // -----------------------------------------------------------------------------------------------
 startGame();
@@ -100,4 +118,4 @@ document.onkeyup = function(event) {
     roundComplete();
 
     console.log(letterGuessed);
-}
+};
