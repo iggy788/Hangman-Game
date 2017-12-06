@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Do Now</title>
+</head>
+
+<body>
+
+    <!--Create a person object with the following properties: “name” “age” “profession” “nick-name” “canDrive” (function that returns true if age >= 16)-->
+    <script>
+        var person = {
+            "name": "Mike",
+            "age": 29,
+            "profession": "Professional Services Engineer",
+            "nick-name": "Iggy",
+            "canDrive": function() {
+                if (this.age >= 16) {
+                    console.log(`Yes, ${this["nick-name"]} can drive`);
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+        console.log(`Name: ${person.name}`);
+        console.log("Name: " + person.name);
+        console.log(person["nick-name"] + " is " + person.age);
+        console.log(`Can: ${person.name} drive?`);
+        console.log(person.canDrive());
+    </script>
+
+
+</body>
+
+</html>

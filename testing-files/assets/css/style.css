@@ -1,0 +1,189 @@
+    body {
+        /* Positioning */
+        margin-bottom: 150px;
+        /* Typography */
+        font-family: 'Open Sans Condensed', sans-serif;
+        /* Visual */
+        background-color: peachpuff;
+        color: green;
+    }
+    
+    html {
+        /* Positioning */
+        position: relative;
+        /* Box-model */
+        min-height: 100%;
+    }
+    
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        /* Box-model */
+        min-height: 100%;
+        clear: both;
+    }
+    /* testing position */
+    
+    .col-md-12 {
+        border: 2px solid red;
+        text-align: center;
+        background: #fff;
+        padding: 30px;
+    }
+    
+    .col-md-9 {
+        border: 2px solid red;
+        text-align: center;
+        background: #fff;
+    }
+    
+    .col-md-4 {
+        border: 2px solid blue;
+        background: #fff;
+    }
+    
+    .col-md-6 {
+        border: 2px solid blue;
+        background: #fff;
+    }
+    
+    h1 {
+        border: 3px solid black;
+        font-size: 75px;
+        text-align: center;
+        margin: 0px auto;
+        height: 80%;
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .banner {
+        text-align: center;
+        margin: 50px auto;
+        height: auto;
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    h2 {
+        border: 3px solid orange;
+        font-size: 50px;
+        text-align: center;
+        margin: 10px auto;
+        height: 150px;
+        width: 100%;
+    }
+    
+    .start {
+        border: 3px solid aquamarine;
+        font-size: 25px;
+        text-align: center;
+        margin: 10px auto;
+        height: 150px;
+        width: 100%;
+    }
+    
+    .rightGuess {
+        border: 3px solid black;
+        font-size: 25px;
+        text-align: center;
+        margin: 0px auto;
+        height: 50px;
+        width: 100%;
+        float: right;
+    }
+    
+    #rightLetter {
+        border: 3px solid pink;
+        font-size: 25px;
+        text-align: center;
+        margin: 0px auto;
+        width: 100%;
+        height: 100px;
+        float: right;
+    }
+    
+    .wrongGuess {
+        border: 3px solid black;
+        font-size: 25px;
+        text-align: center;
+        height: 50px;
+        width: 100%;
+    }
+    
+    #wrongLetter {
+        border: 3px solid pink;
+        font-size: 25px;
+        text-align: center;
+        margin: 0px auto;
+        width: 100%;
+        height: 100px;
+        float: right;
+    }
+    
+    .score {
+        border: 3px solid black;
+        font-size: 25px;
+        text-align: center;
+        height: 50px;
+        width: 100%;
+    }
+    
+    .guessesLeft {
+        border: 3px solid aquamarine;
+        font-size: 25px;
+        text-align: center;
+        margin: 20px auto;
+        height: 30px;
+        width: 100%;
+    }
+    
+    #currentWins {
+        border: 3px solid pink;
+        font-size: 25px;
+        text-align: center;
+        margin: 0px auto;
+        width: 100%;
+        height: 50px;
+        float: right;
+    }
+    
+    #currentLosses {
+        border: 3px solid pink;
+        font-size: 25px;
+        text-align: center;
+        margin: 0px auto;
+        width: 100%;
+        height: 50px;
+        float: right;
+    }
+    
+    #numGuesses {
+        border: 3px solid pink;
+        font-size: 25px;
+        text-align: center;
+        margin: 0px auto;
+        width: 100%;
+        height: 50px;
+        float: right;
+    }
+    
+    .underscore {
+        /*border: 3px solid black;*/
+        font-size: 75px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .footer {
+        /* Positioning */
+        position: absolute;
+        bottom: 0;
+        /* Box-model */
+        width: 100%;
+        height: 60px;
+        margin-top: 30px;
+        /* Visual */
+        background-color: #666;
+    }

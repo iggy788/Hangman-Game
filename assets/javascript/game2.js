@@ -9,7 +9,7 @@ var wrongLetters = [];
 
 // Game Counters
 var winCount = 0;
-var lassCount = 0;
+var lossCount = 0;
 var guessesLeft = 9;
 
 // FUNCTIONS
@@ -47,24 +47,24 @@ function checkLetters(letter) {
     for (var i = 0; i < numBlanks; i++) {
         if (chosenWord[i] == letter) {
             isLetterInWord = true;
-            alert('Letter found');
         }
     }
     if (isLetterInWord) {
         for (var i = 0; i < numBlanks; i++) {
-            if (selectedWord[i] == letter) {
+            if (chosenWord[i] == letter) {
                 blanksAndSuccesses[i] = letter;
             }
         }
     } else {
         wrongLetters.push(letter);
-        numGuesses++
+        guessesLeft--;
     }
     console.log(blanksAndSuccesses);
+    console.log(guessesLeft);
 }
 
 function roundComplete() {
-    console.log("Win Count: " + winCount + " | Loss Count: " + lossCount + " | Guesses Left");
+    console.log('Win Count: ' + winCount + ' | Loss Count: ' + lossCount + ' | Guesses Left: ' + guessesLeft);
 
     // Update HTML to say guesses left
     document.getElementById("numGuesses").innerHTML = guessesLeft;
@@ -79,12 +79,12 @@ function roundComplete() {
         document.getElementById("winCounter").innerHTML = winCount;
 
         startGame();
-    } else if (numGuesses == 0) {
+    } else if (guessesLeft == 0) {
         lossCount++;
-        alert("You Lost!");
+        alert('You Lost!');
 
         // Update HTML
-        document.getElementById("lossCounter").innerHTML = lossCount;
+        document.getElementById('lossCounter').innerHTML = lossCount;
 
         startGame();
     }
